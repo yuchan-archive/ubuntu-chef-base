@@ -15,3 +15,7 @@ end
 apt_package 'language-pack-ja' do
   action :install
 end
+
+apt_package 'libssl-dev' do
+  action :install
+end
