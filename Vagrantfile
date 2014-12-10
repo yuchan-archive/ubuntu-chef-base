@@ -95,6 +95,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.roles_path = './chef/roles'
     chef.data_bags_path = './chef/data_bags'
     chef.add_recipe 'git'
+    chef.add_recipe 'build-essential'
     chef.add_recipe 'sqlite'
     # chef.add_recipe 'nginx'
     chef.add_recipe 'golang'
