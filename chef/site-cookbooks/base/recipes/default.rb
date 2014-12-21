@@ -2,7 +2,7 @@
 # Cookbook Name:: base
 # Recipe:: default
 #
-# Copyright 2014, YOUR_COMPANY_NAME
+# Copyright 2014, Yusuke Ohashi
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -12,10 +12,8 @@ execute 'bundle install' do
   action :run
 end
 
-apt_package 'language-pack-ja' do
-  action :install
-end
-
-apt_package 'libssl-dev' do
-  action :install
+%w{ gcc g++ lnaguage-pack-ja libssl-dev libreadline-dev }.each do |pkg|
+  package pkg do
+    action :install
+  end
 end
