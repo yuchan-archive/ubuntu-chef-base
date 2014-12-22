@@ -43,7 +43,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder ".", "/vagrant_data"
+  config.vm.synced_folder "../dev", "/vagrant_dev"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -99,6 +99,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe 'sqlite'
     # chef.add_recipe 'nginx'
     chef.add_recipe 'golang'
+    chef.add_recipe 'tmux'
     chef.add_recipe 'base'
     # chef.add_recipe "mysql"
     # chef.add_role "web"

@@ -12,7 +12,7 @@ execute 'bundle install' do
   action :run
 end
 
-%w{ gcc g++ lnaguage-pack-ja libssl-dev libreadline-dev }.each do |pkg|
+%w{ gcc g++ language-pack-ja libssl-dev libreadline-dev }.each do |pkg|
   package pkg do
     action :install
   end
